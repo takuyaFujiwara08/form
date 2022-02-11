@@ -1,0 +1,70 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: "Yu Gothic medium", "游ゴシック medium", "游ゴシック体", "ヒラギノ角ゴ Pro M3", sans-serif;
+    /* line-height: 1.7;*/
+    /* max-width: 600px; */
+    margin: 0 auto;
+    padding: 30px;
+    background: #FAF0E6;
+}
+
+span {
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.bouquet {
+    background-image: url(img/valentine-5989110_1280.jpg);
+    background-size: cover;
+    height: 300px;
+    margin-bottom: 40px;
+
+}
+
+#telBox,
+#allergyDetailBox,
+#allergyBox {
+    margin-bottom: 20px;
+}
+
+#nameBox {
+    margin-bottom: 10px;
+}
+#telBox,
+#allergyDetailBox {
+    display: flex;
+}
+input[type="text"],
+input[type="radio"],
+input[type="tel"],
+#allergyDetailBox {
+    background: rgba(255, 255, 255, .5);
+    border: 1px #000 solid;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    max-width: 100%;
+    margin: 0 10px;
+}
+
+
+/* ボタン */
+.button {
+    background: #0bd;
+    color: #fff;
+    padding: 9px 16px;
+    border: 1px #fff solid;
+}
+.plus {
+    background: #0bd;
+    color: #fff;
+    padding: 0px 5px;
+    border: 1px #fff solid;
+    border-radius: 10px;
+}
+
+#allergyDetailBox {
+    display: none;
+}

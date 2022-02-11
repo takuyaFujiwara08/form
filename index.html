@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="結婚式１．５次回の出欠確認">
+    <title>出欠フォーム</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, inirial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=philosopher">
+    <script type="text/javascript" src="code.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div class="bouquet">
+
+        </div>
+
+        <script>let submitted = false;</script>
+        <iframe name="hidden_iframe" style="display:none;" onload="if(submitted){window.location='thanks.html';}"></iframe>
+        <form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdajBlAiYdVgbS-g4A8rFSwiSPgBQH7iXR4ACg7e9HnK9Kyjg/formResponse" method="post" name="form" target="hidden_iframe" onsubmit="submitted=true;">    
+
+            <div id="inputBox">
+                <span>お名前</span>
+                <div id="nameBox">
+                    <input type="text" name="entry.718191799" placeholder="お名前" style="margin-bottom: 10px;" required>
+                </div>
+                <div class="plusButton">
+                    <input type="button" class="plus" value="+" style="margin-bottom: 10px;" onclick="createNameBox()"><br>
+                </div>
+    
+    
+                <span>お電話番号</span>
+                <div id="telBox">
+                    <input type="tel" size="5" name="entry.745574103" placeholder="000" required>-
+                    <input type="tel" size="5" name="entry.543309823" placeholder="0000" required>-
+                    <input type="tel" size="5" name="entry.517108552" placeholder="0000" required>
+                </div>
+    
+                <span>アレルギー</span>
+                <div id="allergyBox">
+                    <input class="js-check" type="radio" name="entry.1134843497" value="なし" id="No" checked required onclick="formSwitch()">
+                    <label for="No">なし</label>
+                    <input class="js-check" type="radio" name="entry.1134843497" value="あり" id="Yes" required onclick="formSwitch()">
+                    <label for="Yes">あり</label><br>
+                </div>
+    
+                <div id="allergyDetailBox">
+                    <textarea name="entry.560048140"></textarea>
+                </div>
+                <input type="button" id="button" value="確認" onclick="checkInfo()">
+            </div>
+            
+            <div id="checkDisplayBox">
+            </div>
+            <div id="buttonBox"> 
+                <input type="submit" id="submitButton" value="送信" style="display: none;">
+            </div>
+
+        </form>
+    </div>
+
+    <!--
+    <script>
+        HTMLElement.prototype.observe = function (type) {
+            const getHandler = resolve => {
+                const result = () => {
+                    resolve();
+                    this.removeEventListener(type, result);
+                };
+                return result;
+            };
+            return new Promise(resolve => this.addEventListener(type, getHandler(resolve)));
+        };
+
+        (async () => {
+            while (true) {
+                await document.getElementById("button").observe("click");
+
+                const workArea = document.getElementById("checkDisplay");
+
+                const backup = workArea.cloneNode(true);
+
+                workArea.innerHTML = `
+                    <p>確認画面</p>
+                    <p>お名前: ${document.getElementsByName("entry.718191799")[0].value}</p>
+                    <p>お電話番号: ${document.getElementsByName("entry.745574103")[0].value} - ${document.getElementsByName("entry.543309823")[0].value} - ${document.getElementsByName("entry.517108552")[0].value}</p>
+                    <p>アレルギー: ${document.getElementsByName("entry.560048140")[0].value}</p>
+                    <input id="back" type="button" value="戻る">
+                `;
+                
+                await document.getElementById("back").observe("click");
+                
+                document.body.replaceChild(backup, workArea);
+                
+                var inputBox = document.getElementById("inputBox");
+                inputBox.style.display ="block";
+
+            };
+        })();
+    </script>
+    -->
+
+</body>
+</html>

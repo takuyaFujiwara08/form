@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="結婚式１．５次回の出欠確認">
+    <title>出欠フォーム</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, inirial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=philosopher">
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Klee+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="formComment">
+        ご回答ありがとうございます<br>
+        確認のためお名前を記載いただけますと幸いです<br>
+    </div>
+
+    <script>let submitted = false;</script>
+    <iframe name="hidden_iframe" style="display:none;" onload="if(submitted){window.location='thanks.html';}"></iframe>
+    <form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScvoWbQgspXBGw5hqCdcVosQqDF-dCaJjW5gugFXAxfMrtm5A/formResponse" method="post" name="form" target="hidden_iframe" onsubmit="submitted=true;">    
+        <div>
+            <span>お名前</span>
+            <div class="nameBox">
+                <div class="name"><input type="text" size="5" name="entry.230496890" placeholder="姓" required></div>
+                <div class="name"><input type="text" size="5" name="entry.481830242" placeholder="名" required></div>
+            </div>
+        </div> 
+
+        <div>
+            <span>お祝いメッセージ</span>
+            <div class="messageBox">
+                <textarea name="entry.1734474800" cols="30" rows="5" placeholder="コメント"></textarea>
+            </div>
+        </div>
+        <input type="submit" class="button" value="送信">
+    
+</body>
+</html>

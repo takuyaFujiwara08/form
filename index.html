@@ -8,100 +8,118 @@
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, inirial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=philosopher">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Klee+One&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="code.js"></script>
 </head>
 
 <body>
-    <div id="container">
-        <div class="bouquet">
+    <header>
 
+    </header>
+    <p class="bouquet">
+
+    </p>
+
+    <main>
+        <section class="shoutaibun">
+            謹啓 早春の候 皆様にはお健やかにお過ごしのことと<br>
+            お慶び申し上げます<br>
+            <br>
+            このたび 私たちは 結婚式を挙げることになりました<br>
+            つきましては 結婚の報告をかねて<br>
+            心ばかりの披露パーティを催したいと存じます<br>
+            <br>
+            お忙しい中 まことに恐縮ですが<br>
+            なごやかな宴にしたいと思っておりますので<br>
+            ぜひ出席くださいますようご案内申し上げます<br>
+            <br>
+            なお勝手ながら会費制にさせていただきましたので<br>
+            お心遣いはなさいませんようお願い申し上げます<br>
+            <p class="kinpaku">謹白</p>
+            2022年3月吉日<br>
+                藤原 拓也<br>
+                谷川 怜美
+        </section>
+
+        <section class="section">
+            <div class="block">
+                <span>日時</span><br>
+                <div class="infoBlock">
+                    <p style="font-size: 1.25rem;">2022年05月03日 火曜日</p><br>
+                    受　付 午後4時00分<br>
+                    披露宴 午後5時00分
+                </div>
+            </div>
+
+            <div class="block">
+                <span>場所</span><br>
+                <div class="infoBlock">
+                    <p style="font-size: 1rem;">RESTAURANT mitte <レストラン ミッテ></p><br>
+                    大阪府大阪市中央区安土町2-3-13<br>
+                    大阪国際ビルディング2階<br>
+                    <a href="https://g.page/RESTAURANTmitte?share">
+                        GoogleMapで開く  
+                    </a><br>
+                    <p class="station">
+                        大阪メトロ 堺筋線 堺筋本町駅より 徒歩2分<br>
+                        大阪メトロ 御堂筋線 本町駅より 徒歩5分<br>
+                    </p>
+                    <br>
+                    電話番号：06-4705-9057<br>
+                </div>
+            </div>
+
+            <div class="block">
+                <span>会費</span><br>
+                <div class="infoBlock">
+                    15,000円
+                </div>                
+            </div>
+        </section>
+
+        <aside class="section">
+            <div class="block">
+                <span>感染症対策について</span><br>
+                <div class="infoBlock" style="font-size: 0.75rem;">
+                    現在 新型コロナウイルスの感染拡大により<br>
+                    結婚式のご参加に関しても<br>
+                    ご心配をおかけしていることと存じます<br>
+                    <br>
+                    開催式場ではできる限りの対策を講じております<br>
+                    式場公式ホームページに対策を記載しておりますので<br>
+                    ご覧くださいませ<br>
+                    【 <a href="https://www.mitte.ne.jp/wedding/corona/">レストラン ミッテ公式ホームページ</a> 】<br>
+                    <br>
+                    また 当日は受付にて検温をさせていただいております<br>
+                    体温が37.5度以上の場合は<br>
+                    ご列席をお断りさせていただきますので<br>                    
+                    あらかじめご了承くださいませ<br>
+                    <br>
+                    皆様の安心と安全を第一に考えておりますので<br>
+                    無理のないご判断で<br>
+                    ご出席のお知らせをいただけましたら幸いです                
+                </div>
+
+            </div>
+            <div class="block">
+                <span>ご出席確認</span><br>
+                <div class="infoBlock">
+                お手数ながらご都合のほどを4月3日迄に<br>
+                お知らせいただければ幸いに存じます<br>
+                </div>
+            </div>
+        </aside>
+        <div class="shukketsu">
+            <a class="button" href="form.html">出席</a>
+            <a class="button" href="kesseki.html">欠席</a>
+            <a class="button" href="horyu.html">保留</a>
         </div>
 
-        <script>let submitted = false;</script>
-        <iframe name="hidden_iframe" style="display:none;" onload="if(submitted){window.location='thanks.html';}"></iframe>
-        <form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdajBlAiYdVgbS-g4A8rFSwiSPgBQH7iXR4ACg7e9HnK9Kyjg/formResponse" method="post" name="form" target="hidden_iframe" onsubmit="submitted=true;">    
-
-            <div id="inputBox">
-                <span>お名前</span>
-                <div id="nameBox">
-                    <input type="text" name="entry.718191799" placeholder="お名前" style="margin-bottom: 10px;" required>
-                </div>
-                <div class="plusButton">
-                    <input type="button" class="plus" value="+" style="margin-bottom: 10px;" onclick="createNameBox()"><br>
-                </div>
     
-    
-                <span>お電話番号</span>
-                <div id="telBox">
-                    <input type="tel" size="5" name="entry.745574103" placeholder="000" required>-
-                    <input type="tel" size="5" name="entry.543309823" placeholder="0000" required>-
-                    <input type="tel" size="5" name="entry.517108552" placeholder="0000" required>
-                </div>
-    
-                <span>アレルギー</span>
-                <div id="allergyBox">
-                    <input class="js-check" type="radio" name="entry.1134843497" value="なし" id="No" checked required onclick="formSwitch()">
-                    <label for="No">なし</label>
-                    <input class="js-check" type="radio" name="entry.1134843497" value="あり" id="Yes" required onclick="formSwitch()">
-                    <label for="Yes">あり</label><br>
-                </div>
-    
-                <div id="allergyDetailBox">
-                    <textarea name="entry.560048140"></textarea>
-                </div>
-                <input type="button" id="button" value="確認" onclick="checkInfo()">
-            </div>
-            
-            <div id="checkDisplayBox">
-            </div>
-            <div id="buttonBox"> 
-                <input type="submit" id="submitButton" value="送信" style="display: none;">
-            </div>
-
-        </form>
-    </div>
-
-    <!--
-    <script>
-        HTMLElement.prototype.observe = function (type) {
-            const getHandler = resolve => {
-                const result = () => {
-                    resolve();
-                    this.removeEventListener(type, result);
-                };
-                return result;
-            };
-            return new Promise(resolve => this.addEventListener(type, getHandler(resolve)));
-        };
-
-        (async () => {
-            while (true) {
-                await document.getElementById("button").observe("click");
-
-                const workArea = document.getElementById("checkDisplay");
-
-                const backup = workArea.cloneNode(true);
-
-                workArea.innerHTML = `
-                    <p>確認画面</p>
-                    <p>お名前: ${document.getElementsByName("entry.718191799")[0].value}</p>
-                    <p>お電話番号: ${document.getElementsByName("entry.745574103")[0].value} - ${document.getElementsByName("entry.543309823")[0].value} - ${document.getElementsByName("entry.517108552")[0].value}</p>
-                    <p>アレルギー: ${document.getElementsByName("entry.560048140")[0].value}</p>
-                    <input id="back" type="button" value="戻る">
-                `;
-                
-                await document.getElementById("back").observe("click");
-                
-                document.body.replaceChild(backup, workArea);
-                
-                var inputBox = document.getElementById("inputBox");
-                inputBox.style.display ="block";
-
-            };
-        })();
-    </script>
-    -->
+    </main>
 
 </body>
 </html>

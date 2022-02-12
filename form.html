@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="結婚式１．５次回の出欠確認">
+    <title>出欠フォーム</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, inirial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=philosopher">
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Klee+One&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="code.js"></script>
+</head>
+
+<body>
+    <div id="contact" class="big-bg">
+        <header>   
+        </header>
+
+        <div class="formComment">
+            ご回答ありがとうございます<br>
+            披露宴ご参加にあたりまして 下記の記入をお願いいたします<br>
+        </div>
+    
+        <script>let submitted = false;</script>
+        <iframe name="hidden_iframe" style="display:none;" onload="if(submitted){window.location='thanks.html';}"></iframe>
+        <form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe31A2eex4W0bRzmDyU8T862MhfoDRhNA8khMphtUtsuAI-DA/formResponse" method="post" name="form" target="hidden_iframe" onsubmit="submitted=true;">    
+            <div id="inputBox">
+                <div>
+                    <span>お名前</span>
+                    <div class="nameBox">
+                        <input type="text" size="5" name="entry.1038520568" placeholder="姓" required>
+                        <input type="text" size="5" name="entry.758212106" placeholder="名" required>
+                    </div>
+                </div> 
+        
+                <div>
+                    <span>お電話番号</span>
+                    <div class="telBox">
+                        <input type="tel" size="5" name="entry.1307713836" placeholder="000" required>-
+                        <input type="tel" size="5" name="entry.168716669" placeholder="0000" required>-
+                        <input type="tel" size="5" name="entry.1431886975" placeholder="0000" required>
+                    </div>
+                </div>
+        
+                <div>
+                    <span>アレルギー</span>
+                    <div class="allergyBox">
+                        <input class="js-check" type="radio" name="entry.568964379" value="なし" id="aNo" required checked onclick="formSwitch()">
+                        <label for="aNo">なし</label>
+                        <input class="js-check" type="radio" name="entry.568964379" value="あり" id="aYes" required onclick="formSwitch()">
+                        <label for="aYes">あり</label><br>
+                    </div>
+                    
+                    <div id="allergyDetailBox">
+                        <textarea name="entry.1600351969" cols="30" rows="2" placeholder="例）乳、卵"></textarea>
+                    </div>
+                </div>
+        
+                <div>
+                    <span>お祝いメッセージ</span>
+                    <div class="messageBox">
+                        <textarea name="entry.1799748393" cols="30" rows="5" placeholder="コメント"></textarea>
+                    </div>
+                </div>
+                <input type="button" id="button" value="確認" onclick="checkInfo()">
+                </div>
+            </div>
+            <div id="checkDisplayBox">
+            </div>
+            <div id="buttonBox">
+                <input type="submit" id="submitButton" value="送信" style="display: none;">
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

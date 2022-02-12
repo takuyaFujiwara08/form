@@ -2,35 +2,20 @@ html {
     font-size: 100%;
 }
 
-/* BODY
------------------------*/
 body {
     font-family: "Yu Gothic medium", "游ゴシック medium", "游ゴシック体", "ヒラギノ角ゴ Pro M3", sans-serif;
     /* line-height: 1.7;*/
     /* max-width: 600px; */
     margin: 0 auto;
-    padding: 15px;
+    padding: 30px;
     background: #FAF0E6;
 }
 
 span {
-    font-weight: bold;
     font-size: 1.125rem;
+    font-weight: bold;
 }
 
-h2 {
-    text-align: center;
-}
-
-/* HEADER
------------------------*/
-/* header {
-    background-image: url(img/test.JPG);
-    height: 60px;
-} */
-
-/* INDEX
------------------------*/
 .bouquet {
     background-image: url(img/valentine-5989110_1280.jpg);
     background-size: cover;
@@ -38,95 +23,46 @@ h2 {
     margin-bottom: 40px;
 
 }
-.section {
-    margin: 0px 10px;
-    text-align: center;
-}
-.shoutaibun {
-    text-align: center;
-    font-size: 0.875rem;
-    font-family: 'Comforter', cursive;
-    font-family: 'Klee One', cursive;
-    padding: 5px;
-    margin-bottom: 40px;
-    background: rgba(255, 255, 255, .5);
-    border-radius: 10px;
-}
-.kinpaku {
-    text-align: end;
-}
-.infoBlock {
-    font-size: 1rem;
-	position: relative;
-    padding: 10px 0;
-}
-.station {
-    font-size: 0.825rem;
-}
-.block {
-    padding-bottom: 40px;
-}
-.shukketsu {
-    text-align: center;
+
+#telBox,
+#allergyDetailBox,
+#allergyBox {
+    margin-bottom: 20px;
 }
 
-.infoBlock::before, .infoBlock::after {
-	content: '';
-	width: 30px;
-	height: 15px;
-	position: absolute;
+#nameBox {
+    margin-bottom: 10px;
 }
-
-.infoBlock::before {
-	border-left: solid 2px #808080;
-	border-top: solid 2px #808080;
-	top: 0;
-	left: 0;
-}
-
-.infoBlock::after {
-	border-right: solid 2px #808080;
-	border-bottom: solid 2px #808080;
-	bottom: 0;
-	right: 0;
-}
-
-
-/* CONTACT
------------------------*/
-/*#contact {
-    background-image: url(img/test.JPG);
-    background-size: cover;
-}*/
-.formComment {
-    text-align: center;
-    font-size: 0.825rem;
-    padding-bottom: 40px;
-}
-.nameBox {
-    display: flex;
-}
-.telBox {
+#telBox,
+#allergyDetailBox {
     display: flex;
 }
 input[type="text"],
-input[type="tel"],
 input[type="radio"],
-#allergyDetailBox,
-.messageBox {
+input[type="tel"],
+#allergyDetailBox {
     background: rgba(255, 255, 255, .5);
     border: 1px #000 solid;
     margin-bottom: 20px;
     border-radius: 5px;
     max-width: 100%;
-    margin: 0 10px 20px 10px;
+    margin: 0 10px;
 }
+
+
 /* ボタン */
 .button {
     background: #0bd;
     color: #fff;
     padding: 9px 16px;
     border: 1px #fff solid;
+}
+.plus {
+    background: #0bd;
+    color: #fff;
+    padding: 0px 5px;
+    border: 1px #fff solid;
+    border-radius: 10px;
 }
 
 #allergyDetailBox {

@@ -1,66 +1,90 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="結婚式１．５次回の出欠確認">
-    <title>出欠フォーム</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, inirial-scale=1">
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=philosopher">
-    <script type="text/javascript" src="code.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web招待状</title>
+    <!-- css -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <script type="text/javascript" src="code.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Comforter&family=Klee+One&display=swap" rel="stylesheet">
+    </head>
 
-<body>
-    <div id="container">
-        <div class="bouquet">
+    <body>
+        <header>
+            <ul class="header-nav wrapper">
+                <li><a href="index.html">HOME</a></li>
+            </ul>
+        </header>
+        <div class="form">
+            <main class="wrapper">
+                <div class="greeting">
+                    ご回答ありがとうございます<br>
+                    披露宴ご参加にあたりまして<br>
+                    下記の記入をお願いいたします
+                </div>
+                
+                <script>let submitted = false;</script>
+                <iframe name="hidden_iframe" style="display:none;" onload="if(submitted){window.location='thanks.html';}"></iframe>
+                <form class="wrapper" id="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdajBlAiYdVgbS-g4A8rFSwiSPgBQH7iXR4ACg7e9HnK9Kyjg/formResponse" method="post" name="form" target="hidden_iframe" onsubmit="submitted=true;">
+                    <div id="input-box">
+                        <div>
+                            <span>お名前</span>
+                            <div class="form-box" id="nameBox">
+                                <input type="text" name="entry.718191799" placeholder="お名前" required>
+                            </div>
+                            <div class="plusbutton">
+                                <input type="button" class="plus" value="追加はこちら" onclick="createNameBox()"><br>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <span>お電話番号</span>
+                            <div class="form-box">
+                                <input type="tel" size="5" name="entry.745574103" placeholder="000" required>-
+                                <input type="tel" size="5" name="entry.543309823" placeholder="0000" required>-
+                                <input type="tel" size="5" name="entry.517108552" placeholder="0000" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <span>アレルギー</span>
+                            <div class="form-box">
+                                <input class="js-check" type="radio" name="entry.1134843497" value="なし" id="No" checked required onclick="formSwitch()">
+                                <label for="No">なし</label>
+                                <input class="js-check" type="radio" name="entry.1134843497" value="あり" id="Yes" required onclick="formSwitch()">
+                                <label for="Yes">あり</label><br>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="form-box" id="allergyDetailBox">
+                                <textarea id="allergyDetail" name="entry.560048140" cols="40" rows="2" placeholder="例）乳、卵"></textarea>
+                            </div>
+                        </div>
 
+                        <div>
+                            <div class="button">
+                                <input type="button" value="確認" onclick="checkInfo()">
+                            </div>
+                        </div>
+                    </div> 
+                    <div id="checkDisplayBox">
+                    </div>
+                    <div id="buttonBox">
+                        <div class="button">
+                            <input type="submit" id="submitButton" value="送信">
+                        </div>
+                    </div>
+                </form>
+            </main>
+    
+            <footer>
+    
+            </footer>
         </div>
-
-        <script>let submitted = false;</script>
-        <iframe name="hidden_iframe" style="display:none;" onload="if(submitted){window.location='thanks.html';}"></iframe>
-        <form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdajBlAiYdVgbS-g4A8rFSwiSPgBQH7iXR4ACg7e9HnK9Kyjg/formResponse" method="post" name="form" target="hidden_iframe" onsubmit="submitted=true;">    
-
-            <div id="inputBox">
-                <span>お名前</span>
-                <div id="nameBox">
-                    <input type="text" name="entry.718191799" placeholder="お名前" style="margin-bottom: 10px;" required>
-                </div>
-                <div class="plusButton">
-                    <input type="button" class="plus" value="+" style="margin-bottom: 10px;" onclick="createNameBox()"><br>
-                </div>
-    
-    
-                <span>お電話番号</span>
-                <div id="telBox">
-                    <input type="tel" size="5" name="entry.745574103" placeholder="000" required>-
-                    <input type="tel" size="5" name="entry.543309823" placeholder="0000" required>-
-                    <input type="tel" size="5" name="entry.517108552" placeholder="0000" required>
-                </div>
-    
-                <span>アレルギー</span>
-                <div id="allergyBox">
-                    <input class="js-check" type="radio" name="entry.1134843497" value="なし" id="No" checked required onclick="formSwitch()">
-                    <label for="No">なし</label>
-                    <input class="js-check" type="radio" name="entry.1134843497" value="あり" id="Yes" required onclick="formSwitch()">
-                    <label for="Yes">あり</label><br>
-                </div>
-    
-                <div id="allergyDetailBox">
-                    <textarea name="entry.560048140"></textarea>
-                </div>
-                <input type="button" id="button" value="確認" onclick="checkInfo()">
-            </div>
-            
-            <div id="checkDisplayBox">
-            </div>
-            <div id="buttonBox"> 
-                <input type="submit" id="submitButton" value="送信" style="display: none;">
-            </div>
-
-        </form>
-    </div>
-
-</body>
+    </body>
 </html>

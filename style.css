@@ -1,70 +1,178 @@
+@charset "UTF-8";
+
 html {
     font-size: 100%;
 }
-
 body {
-    font-family: "Yu Gothic medium", "游ゴシック medium", "游ゴシック体", "ヒラギノ角ゴ Pro M3", sans-serif;
-    /* line-height: 1.7;*/
-    /* max-width: 600px; */
-    margin: 0 auto;
-    padding: 30px;
+    color: #432; 
+    font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS P Gothic",Osaka,sans-serif;
     background: #FAF0E6;
+    line-height: 1.75;
 }
-
-span {
-    font-size: 1.125rem;
-    font-weight: bold;
+a {
+    text-decoration: none;
 }
-
-.bouquet {
-    background-image: url(img/valentine-5989110_1280.jpg);
-    background-size: cover;
-    height: 300px;
-    margin-bottom: 40px;
-
+img {
+    width: 100%;
 }
-
-#telBox,
-#allergyDetailBox,
-#allergyBox {
-    margin-bottom: 20px;
+h2 {
+    font-size: 1.25rem;
 }
-
-#nameBox {
+header {
+    background-color: #E0D7CE;
     margin-bottom: 10px;
 }
-#telBox,
-#allergyDetailBox {
+footer {
+    width: 100%;
+    height: 30px;
+    background-color: #E0D7CE;
+}
+span::before {
+    content: "■";
+}
+.wrapper {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* HEADER
+============================*/
+.header-nav {
     display: flex;
+    justify-content: start;
+    padding: 10px 0 0;
+}
+.header-nav li {
+    list-style: none;
+    padding: 0 10px;
+}
+.header-nav li a {
+    color: #432;
+}
+.header-nav {
+    font-size: 1.25rem;
+}
+
+/* HOME
+====================*/
+.top-photo {
+    margin: 0 auto;
+}
+.flower {
+    height: 70%;
+}
+.greeting {
+    text-align: center;
+    background: rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    padding: 1rem 8rem;
+    margin: 5px 0 30px;
+    font-family: 'Comforter', cursive;
+    font-family: 'Klee One', cursive;
+}
+.greeting p {
+    text-align: right;
+}
+.contents-wrapper {
+    text-align: center;
+}
+.contents-block {
+    margin: 80px 0 30px;
+    padding: 1rem;
+    border-width: 3px;
+    border-radius: 10px;
+    border-style: outset;
+}
+.button-box {
+    margin-top: 10px;
+}
+.button-box ul {
+    display: flex;
+    justify-content: center;
+}
+.button-box ul li {
+    list-style: none;
+    padding: 0 10px;
+}
+.button-box ul li a {
+    color: #432;
+    background-color: #E0D7CE;
+    border-radius: 10%;
+    padding: 12px 20px;
+}
+
+/* FORM
+====================*/
+.form {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.form main {
+    flex: 1;
+}
+.form-box {
+    margin: 0 0 20px 20px;
+    width: 100%;
 }
 input[type="text"],
-input[type="radio"],
 input[type="tel"],
-#allergyDetailBox {
-    background: rgba(255, 255, 255, .5);
-    border: 1px #000 solid;
-    margin-bottom: 20px;
+input[type="radio"],
+#allergyDetail,
+#message {
+    border: 1px #432 solid;
     border-radius: 5px;
+    background: rgba(255, 255, 255, .5);
     max-width: 100%;
-    margin: 0 10px;
+    margin: 0 5px;
 }
-
-
-/* ボタン */
-.button {
-    background: #0bd;
-    color: #fff;
-    padding: 9px 16px;
-    border: 1px #fff solid;
-}
-.plus {
-    background: #0bd;
-    color: #fff;
-    padding: 0px 5px;
-    border: 1px #fff solid;
-    border-radius: 10px;
-}
-
 #allergyDetailBox {
     display: none;
+}
+.plus {
+    font-size: 0.75rem;
+}
+.button {
+    color: #432;
+    background-color: #E0D7CE;
+    text-align: center;
+    width: 50px;
+    height: 30px;
+    margin-bottom: 20px;
+    border-radius: 10%;
+}
+.plusbutton {
+    color: #432;
+    background-color: #E0D7CE;
+    text-align: center;
+    width: 100px;
+    height: 25px;
+    margin-bottom: 20px;
+    border-radius: 10%;
+}
+#buttonBox {
+    display: none;
+}
+.thanks {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;    
+}
+.thanks div {
+    flex: 1;
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        width: 95%;
+    }
+    .greeting {
+        padding: 1rem 0.25rem;
+        font-size: 0.825rem;
+    }
+
+    .form-box {
+        margin: 0 0 20px 0;
+    }
+    
 }

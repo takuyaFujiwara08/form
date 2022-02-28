@@ -26,11 +26,9 @@ function createNameBox() {
 }
 
 function checkInfo(){
-    var inputBox = document.getElementById("inputBox");
+    var inputbox = document.getElementById("input-box");
     var submitButton = document.getElementById("submitButton");
-    inputBox.style.display ="none";
-    submitButton.style.display ="block";
-
+    var buttonBox = document.getElementById("buttonBox");
     const workArea = document.getElementById("checkDisplayBox");
 
     var tel1 = document.getElementsByName("entry.745574103")[0].value;
@@ -45,26 +43,42 @@ function checkInfo(){
             nameFull += ", "
         }
     }
+    
+    if (nameFull == "") {
+        alert('お名前が未入力です')
+    } else if (tel1 == "") {
+        alert('お電話番号が未入力です')
+    } else if (tel2 == "") {
+        alert('お電話番号が未入力です')
+    } else if (tel3 == "") {
+        alert('お電話番号が未入力です')
+    } else {
+        workArea.innerHTML = `
+            <div id="checkDisplay">
+                <span>お名前</span>
+                <p style="padding-left: 10px;">${nameFull}</p>
+                <span>お電話番号</span>
+                <p style="padding-left: 10px;">${tel1} - ${tel2} - ${tel3}</p>
+                <span>アレルギー</span>
+                <p style="padding-left: 10px;">${allergy}</p>
+                <div class="button">
+                    <input id="back" type="button" value="戻る" onClick="backDisplay()">
+                </div>
+            </div>
+            `;
 
-    workArea.innerHTML = `
-        <div id="checkDisplay">
-            <span>お名前</span>
-            <p style="padding-left: 10px;">${nameFull}</p>
-            <span>お電話番号</span>
-            <p style="padding-left: 10px;">${tel1} - ${tel2} - ${tel3}</p>
-            <span>アレルギー</span>
-            <p style="padding-left: 10px;">${allergy}</p>
-            <input id="back" type="button" value="戻る" onClick="backDisplay()">
-        </div>
-        `;
+            inputbox.style.display = "none";
+            buttonBox.style.display ="block";
+    }
 }
 
 function backDisplay() {
-    var inputBox = document.getElementById("inputBox");
+    var inputBox = document.getElementById("input-box");
     var submitButton = document.getElementById("submitButton");
     var checkDisplay = document.getElementById("checkDisplay");
+    var buttonBox = document.getElementById("buttonBox");
     inputBox.style.display ="block";
-    submitButton.style.display ="none";
+    buttonBox.style.display ="none";
     checkDisplay.remove();
 }
 

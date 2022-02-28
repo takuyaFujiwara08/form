@@ -15,19 +15,25 @@ function createNameBox() {
     var textbox_element = document.getElementById("nameBox");
 
     if (textbox_element.hasChildNodes()) {
+        var new_element_p = document.createElement("p");
+        /*
+        var text = document.createTextNode(`<input type="text" name="entry.718191799" placeholder="お名前">`);
+        */
+
         var new_element = document.createElement("input");
         new_element.setAttribute("type", "text");
         new_element.setAttribute("name", "entry.718191799");
         new_element.setAttribute("placeholder", "お名前");
-        new_element.setAttribute("style", "margin-bottom: 10px;");
-        textbox_element.appendChild(new_element);
+        new_element.setAttribute("style", "margin-bottom: 5px;");
+
+        new_element_p.appendChild(new_element);
+        textbox_element.appendChild(new_element_p);
     }
     
 }
 
 function checkInfo(){
     var inputbox = document.getElementById("input-box");
-    var submitButton = document.getElementById("submitButton");
     var buttonBox = document.getElementById("buttonBox");
     const workArea = document.getElementById("checkDisplayBox");
 

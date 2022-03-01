@@ -16,6 +16,9 @@ function createNameBox() {
 
     if (textbox_element.hasChildNodes()) {
         var new_element_p = document.createElement("p");
+        var childCount = textbox_element.childElementCount + Math.random();
+
+        new_element_p.setAttribute("id", "box" + childCount);
         /*
         var text = document.createTextNode(`<input type="text" name="entry.718191799" placeholder="お名前">`);
         */
@@ -26,7 +29,14 @@ function createNameBox() {
         new_element.setAttribute("placeholder", "お名前");
         new_element.setAttribute("style", "margin-bottom: 5px;");
 
+        var new_element_button = document.createElement("input");
+        new_element_button.setAttribute("type", "button");
+        new_element_button.setAttribute("value", "削除");
+        new_element_button.setAttribute("onClick", "deleteBox(" + childCount + ")");
+
+
         new_element_p.appendChild(new_element);
+        new_element_p.appendChild(new_element_button);
         textbox_element.appendChild(new_element_p);
     }
     
@@ -76,6 +86,12 @@ function checkInfo(){
             inputbox.style.display = "none";
             buttonBox.style.display ="block";
     }
+}
+
+function deleteBox(count) {
+    var name_box = document.getElementById("box" + count);
+    name_box.remove();
+
 }
 
 function backDisplay() {
